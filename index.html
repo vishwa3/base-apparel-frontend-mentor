@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="left">
+        <div class="info-container">
+          <div class="logo"><img src="images/logo.svg" /></div>
+          <div class="text-section">
+            <h1><span>We're</span><br />coming<br />soon</h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <form>
+            <div class="input-email">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <div class="error-submit-container">
+                <img src="images/icon-error.svg" />
+                <button type="submit">
+                  <img src="images/icon-arrow.svg" alt="submit-icon" />
+                </button>
+              </div>
+            </div>
+            <p style="visibility: hidden" class="error">
+              Please provide a valid email
+            </p>
+          </form>
+        </div>
+        <footer>
+          <p class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/vishwa3" target="_blank">Vishwanath K</a
+            >.
+          </p>
+        </footer>
+      </section>
+      <section class="right">
+        <div class="mobile-image">
+          <img src="images/logo.svg" />
+          <img src="images/hero-mobile.jpg" alt="mobile-background" />
+        </div>
+        <div class="desktop-image">
+          <img src="images/hero-desktop.jpg" alt="desktop-background" />
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: grey;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  overflow: hidden;
+}
+
+.left {
+  background: url("images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 6rem;
+}
+
+.info-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.text-section h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.9rem;
+  text-transform: uppercase;
+}
+.text-section h1 span {
+  color: hsl(0deg, 36%, 70%);
+}
+.text-section p {
+  color: hsl(0deg, 36%, 70%);
+  line-height: 1.5;
+  width: 70%;
+}
+
+form .input-email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+form .input-email input {
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 70%;
+  outline: none;
+  border: 1px solid hsl(0deg, 36%, 70%);
+}
+form .input-email input::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+form .input-email input:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+form .input-email input::placeholder {
+  color: hsl(0deg, 36%, 70%);
+}
+form .input-email .error-submit-container {
+  margin-left: -5rem;
+}
+form .input-email .error-submit-container > img {
+  visibility: hidden;
+}
+form .input-email .error-submit-container button {
+  outline: none;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(145deg, hsl(0deg, 36%, 70%), hsl(0deg, 93%, 68%));
+  border: none;
+  border-radius: 30px;
+}
+form .input-email .error-submit-container button:hover {
+  cursor: pointer;
+  background: transparent;
+  background-color: hsl(0deg, 80%, 86%);
+  padding: 0.9rem 2.1rem 0.9rem 2.2rem;
+  top: 0;
+  box-shadow: 0px 12px 15px 5px rgba(207, 151, 150, 0.2);
+}
+form .error {
+  color: hsl(0deg, 93%, 68%);
+  margin: 0.5rem 0 0 1.5rem;
+}
+
+.right .desktop-image img {
+  max-height: 100vh;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.right .mobile-image {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .left {
+    padding: 2rem 3rem;
+  }
+}
+@media (max-width: 750px) {
+  .main-container {
+    grid-template-columns: 55% 45%;
+  }
+  .left {
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .right {
+    grid-area: right;
+  }
+  .right .desktop-image {
+    display: none;
+  }
+  .right .mobile-image {
+    display: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .right .mobile-image > img:first-child {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    margin: 1.5rem;
+  }
+  .right .mobile-image > :nth-child(2) {
+    min-width: 100%;
+  }
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "right" "left";
+  }
+  .left {
+    grid-area: left;
+    padding: 2rem 3rem;
+  }
+  .logo {
+    display: none;
+  }
+  .info-container {
+    align-items: center;
+  }
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .text-section h1 {
+    font-size: 3rem;
+  }
+  .text-section p {
+    width: 60%;
+  }
+  form {
+    width: 100%;
+  }
+  form .input-email {
+    justify-content: center;
+  }
+  form .input-email input {
+    width: 60%;
+  }
+  footer {
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  .left {
+    padding: 1rem 0.5rem;
+  }
+  .text-section p {
+    width: 65%;
+  }
+  form .input-email input {
+    width: 65%;
+  }
+}
+@media (max-width: 600px) {
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .text-section p {
+    width: 70%;
+  }
+  form .input-email input {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .text-section p {
+    width: 80%;
+  }
+  form .input-email input {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .left {
+    padding: 1rem 0;
+  }
+  .text-section p {
+    width: 85%;
+  }
+  form .input-email input {
+    width: 85%;
+  }
+}/*# sourceMappingURL=styles.css.map */
